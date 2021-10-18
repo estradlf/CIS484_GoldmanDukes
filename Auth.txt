@@ -1,0 +1,11 @@
+Drop table Users;
+
+CREATE TABLE Users(
+  userID int IDENTITY(1,1) NOT NULL PRIMARY KEY,
+  firstName varchar(50) NOT NULL,
+  lastName varchar(50) NOT NULL, 
+  username varchar(50) NOT NULL,
+  emailAddress varchar(50) NOT NULL,
+  hashedPassword varchar(256) NOT NULL
+  constraint uniqueUsers UNIQUE(username));
+
